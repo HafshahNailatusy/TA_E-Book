@@ -44,37 +44,37 @@ exports.addTransaksi = async (request, response) => {
     ${today.getDate()}${today.getHours()}:Z${today.getMinutes()}:${today.getSeconds()}`
     
     const{UserID, AdminID,BookID, KategoriID} = request.body;
-    // try {
-    //     const BookID = await Promise.all(books.map(async book=>
-    //         const{kategoriID}
-    //         ))
-    // }
+    try {
+        const BookID = await Promise.all(books.map(async book=>
+            const{kategoriID}
+            ))
+    }
 
-    // let newTransaksi = {
-    //     TransaksiID: request.body.TransaksiID, 
-    //     UserID: request.body.UserID,
-    //     TglTransaksi: request.body.TglTransaksi,
-    //     Total: request.body.Total,
-    //     MetodePay: request.body.MetodePay,
-    //     Status: request.body.Status,
-    //     AdminID: request.body.AdminID
-    // }
+    let newTransaksi = {
+        TransaksiID: request.body.TransaksiID, 
+        UserID: request.body.UserID,
+        TglTransaksi: request.body.TglTransaksi,
+        Total: request.body.Total,
+        MetodePay: request.body.MetodePay,
+        Status: request.body.Status,
+        AdminID: request.body.AdminID
+    }
 
     
-    // transaksiModel.create(newTransaksi)
-    // .then(result => {
-    //     return response.json({
-    //         success: true, 
-    //         data: result,
-    //         message: `New Transaksi has been inserted`
-    //     })
-    // })
-    // .catch(error => {
-    //     return response.json({
-    //         success: false, 
-    //         message: error.message
-    //     })
-    // })
+    transaksiModel.create(newTransaksi)
+    .then(result => {
+        return response.json({
+            success: true, 
+            data: result,
+            message: `New Transaksi has been inserted`
+        })
+    })
+    .catch(error => {
+        return response.json({
+            success: false, 
+            message: error.message
+        })
+    })
 }
 
 exports.updateTransaksi = (request, response) => {
