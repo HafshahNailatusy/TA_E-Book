@@ -39,7 +39,7 @@ exports.findTransaksi = async (request, response) => {
 }
 
 exports.addTransaksi = async (request, response) => {
-    const today = new Date();
+    const today = new Date()
     const TglTransaksi= `${today.getFullYear()}-${today.getMonth()+1}-
     ${today.getDate()}${today.getHours()}:Z${today.getMinutes()}:${today.getSeconds()}`
     
